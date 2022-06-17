@@ -1,0 +1,27 @@
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #00aa00;
+  padding: 15px;
+  margin: 10px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo_conteiner {
+  width: 700px;
+}
+
+@media (max-width: 800px), (min-width: 650px) {
+  .todo_conteiner {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 649px), (min-width: 320px) {
+  .todo_conteiner {
+    width: 80vw;
+  }
+}

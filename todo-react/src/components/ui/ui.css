@@ -1,0 +1,81 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 5px;
+  padding: 15px;
+  border: 2px solid #00aa00;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 0);
+}
+.todoTitle {
+  display: flex;
+  align-items: center;
+}
+.check {
+  border: 1.8px solid #00aa00;
+  border-radius: 50%;
+  width: 17.7px;
+  height: 17.8px;
+  margin-right: 7px;
+  display: block;
+}
+.BTN {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid#00AA00;
+  color: #00aa00;
+  border-radius: 2px;
+  padding: 6px;
+}
+.Title {
+  padding-left: 10px;
+  font-size: 20px;
+  color: #00aa00;
+  transition: all 1s;
+}
+.Todo_body {
+  padding: 10px 5px 0 10px;
+}
+.input {
+  background-color: rgba(0, 0, 0, 0);
+  color: #00aa00;
+  border: #00aa00 3px solid;
+  margin-bottom: 4px;
+}
+::placeholder {
+  color: #004500;
+}
+.input.input_Body {
+  height: 100px;
+  resize: none;
+}
+
+input {
+  outline: none;
+}
+textarea {
+  outline: none;
+}
+.complited {
+  text-decoration: line-through;
+}
+.loading {
+  display: inline-block;
+  clip-path: inset(0 3ch 0 0);
+  animation: l 5s steps(4) infinite;
+}
+@keyframes l {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+
+@media (max-width: 649px) {
+  .BTN {
+    margin: 10px 0px;
+  }
+  .todoItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
