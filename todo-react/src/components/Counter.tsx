@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react'
+import { SetStateAction, useState } from 'react'
 import { RootState } from '../redux/store'
 import { useSelector, useDispatch } from 'react-redux'
 import { addTodo } from '../redux/todo'
@@ -19,10 +19,14 @@ export const Counter = () => {
     todo: todos,
   }
   //===========================================================================================
-  const handleClear = (event: ChangeEvent<HTMLInputElement>): void => {
+  const handleClear = (event: {
+    target: { value: SetStateAction<string> }
+  }): void => {
     setInput(event.target.value)
   }
-  const handleArea = (event: ChangeEvent<HTMLTextAreaElement>): void => {
+  const handleArea = (event: {
+    target: { value: SetStateAction<string> }
+  }): void => {
     setTodos(event.target.value)
   }
   const addTask = () => {
